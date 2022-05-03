@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My aplicacion con Sockets</title>
+    <!--Llamamos a las librerias-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <br>
+   <div id="contenedor">
+        
+        <div id="datos-chat">
+                <h3 style="text-align: center;">Chat <br>BIENVENIDO</h3>
+                <br/>
+        </div>
+        <div id="messages"></div>   
+    </div> </br>
+    <div id="caja-chat">
+        <!--Llamamos a la funcion addMassage y retornamos-->
+        <form onsubmit="return addMessage(this)">
+            <!--Se crea los cuadros de texto para el usuario y el mensaje y se crea el boton de enviar -->
+            <input type="text" id="username" placeholder="Tu nombre">
+            <textarea class="limpiartextarea" type="text" id="texto" placeholder="Ingresa un mensaje..."></textarea>
+            <input type="submit" value= "Enviar!">
+        
+        </form>
+    </div>
+
+</body>
+</html>
